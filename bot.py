@@ -1,5 +1,4 @@
 import telebot
-from telebot import apihelper
 import time
 from typing import Tuple, Optional, List
 from deeppavlov.configs import configs
@@ -8,7 +7,7 @@ from deeppavlov.core.commands.utils import expand_path
 from deeppavlov.core.data.utils import update_dict_recursive
 from deeppavlov import build_model, train_model
 
-apihelper.proxy = {'https':'socks5://telegram:S0cks@socks.serzhenko.me:1080'}
+telebot.apihelper.proxy = {'https':'socks5://telegram:S0cks@socks.serzhenko.me:1080'}
 bot = telebot.TeleBot('772232565:AAFstnpOC_dln-Syp3gpE61EadhlJY0dDkA')
 
 class SimilarityMatchingSkill():
